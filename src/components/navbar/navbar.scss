@@ -1,0 +1,59 @@
+@import "../../mixins";
+@import "../../variables";
+
+.nav-wrapper {
+    @include flex(center, center);
+    @include wh(100%, fit-content);
+    background-color: $bg-color1;
+    color:$text-color1;
+
+    .nav-ins-wrap {
+        @include flex(center, center);
+        @include wh(fit-content, fit-content);
+    }
+
+
+    .searchbar{
+         @include wh(fit-content, fit-content);
+         @include flex(center, center);
+         margin: 15px 0;
+         background-color: white;
+         color:$bg-color1;
+         border-radius: 10px;
+
+        .search-icon{
+            padding:6px;
+            padding-left:10px;
+            line-height: 10px;
+             img{
+                @include wh(24px,24px);
+             }
+        }
+        .input{
+            @include wh(220px, 100%);
+            margin-left:5px;
+            input[type="text"]{
+                @include wh(100%, 100%);
+                outline: none;
+                border:none;
+            }
+        }
+    }
+
+    .links-wrapper{
+        @include flex(center, center);
+        margin-left:40px;
+
+        li{
+            list-style: none;
+            margin: 0 10px;
+        }
+
+        a{
+            text-decoration: none;
+            @include text(14px, 400, "Inter", 20px);
+            color:$text-color1;
+        }
+    }
+}
+

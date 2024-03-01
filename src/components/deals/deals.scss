@@ -1,0 +1,115 @@
+@import "../../mixins.scss";
+@import "../../variables.scss";
+
+.deals {
+    @include wh(90%, fit-content);
+    @include flex(center, center);
+    flex-direction: column;
+
+    .deal-topic {
+        @include text(32px, 400, "Inter", 44px, 0em);
+        @include wh(90%, fit-content);
+        color: #2C384A;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .deal-box-wrap {
+        @include wh(100%, fit-content);
+        @include flex(center, center);
+        margin-left: 40px;
+
+        .deal-box {
+            @include wh(calc(100% / 3.5), fit-content);
+            border-radius: 12px;
+            margin-right: 10px;
+            padding:10px;
+            .deal-img {
+                @include flex(center, center);
+                padding: 35px 0;
+
+                img {
+                    @include wh(141px, 103px);
+                }
+            }
+
+            .deal-discounts {
+                @include text(14px, 400, "Inter", 30px, 0em);
+                @include wh(100%, fit-content);
+                @include flex(flex-start, center);
+                color: #074786;
+
+                .first-dis {
+                    @include wh(69px, 28px);
+                    background: #F2F4F7;
+                    margin-right: 10px;
+                    text-align: center;
+                    text-transform: capitalize
+                }
+
+                .second-dis {
+                    @extend .first-dis;
+                    @include wh(107px, 28px);
+                }
+
+            }
+
+            .deal-heading {
+                @include text(16px, 700, "Inter", 24px, 0em);
+                @include flex(center, center);
+                margin-top: 10px;
+            }
+
+            .deal-about {
+                @include wh(100%, fit-content);
+                @include text(16px, 400, "Inter", 24px, 0em);
+                margin-top: 10px;
+                color: #626E79;
+            }
+
+            .deal-price {
+                @include wh(100%, fit-content);
+                @include flex(flex-start, flex-end);
+                margin-top: 10px;
+                ;
+
+                .deal-act {
+                    @include text(20px, 700, "Inter", 28px, 0em);
+                    color: #5C6874;
+                    margin-right: 10px;
+
+                }
+
+                .deal-dis {
+                    @include text(14px, 400, "Inter", 20px, 0em);
+                    color: #9FA9B3;
+                    margin-right: 10px;
+                }
+
+                .deal-off {
+                    @include text(13px, 400, "Inter", 20px, 0em);
+                    color: #EF4C5D;
+                }
+            }
+
+            .deal-btn
+            {
+              @include wh(100%,fit-content);
+              @include flex(center,center);
+             button{
+               @include wh(230px, 48px);
+               border-radius: 12px;
+               background: #1B88F4;
+                @include text(16px, 400, "Inter", 24px, 0em);
+                color:white;
+                border:none;
+                margin:20px 0;
+                margin-left: -20px;
+
+            }
+        }
+
+        }
+    }
+
+}

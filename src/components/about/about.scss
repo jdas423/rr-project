@@ -1,0 +1,70 @@
+@import "../../mixins.scss";
+@import "../../variables.scss";
+
+.about{
+    @include wh(100%,fit-content);
+    @include flex(flex-start,center);
+    flex-direction: column;
+    .upper-box{
+        @include wh(85%,60px);
+        @include text(20px,400,"Inter",60px,0em);
+        text-align:left;
+        margin:20px 0;
+    }
+    .lower-box{
+        @include wh(85%,calc(24px));
+        @include flex(space-between,center);
+        border-top : 2px solid #E1E4E6;
+        border-bottom: 2px solid #E1E4E6;
+        padding:20px 0;
+
+        .left{
+            @include flex(space-between,center);
+            .hypen{
+                width:15px;
+                height:15px;
+                line-height: 15px;
+                padding: 0 5px;
+            }
+            .update-date{
+                @include text(13px,500,"Inter",20px);
+                margin-left: -8px;
+            }
+            .add{
+                margin-left:15px;
+                a{
+                    text-decoration: none;
+                    color:black;
+
+                }
+            }
+            .updated,.add{
+                @extend .left;
+                div{
+                   @extend .update-date;
+                }
+                img{
+                 @extend .hypen;
+                 padding: 0 12px;
+                }
+            }
+
+            
+        }
+        .right{
+            @extend .left;
+            .expand{
+                @extend .left;
+                img{
+                    @extend .hypen;
+                }
+                div{
+                    @extend .update-date;
+                }
+            }
+
+           
+        }
+    }
+}
+

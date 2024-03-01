@@ -1,0 +1,33 @@
+@import "../mixins";
+@import "../variables.scss";
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/static/Inter-Regular.ttf);
+}
+
+*{
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    @include wh(100vw, 100vh);
+}
+
+
+body,#root{
+    @include wh(100%, 100%);
+    background-color: $bg-color2;
+}
+
+
+.main{
+    @include wh(100%, fit-content);
+    @include flex(center,center);
+    flex-direction: column;
+    .wrapper{
+        @extend .main;
+        @include wh(1024px, fit-content);
+    }
+}

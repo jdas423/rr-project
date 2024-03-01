@@ -1,0 +1,19 @@
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin flex($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+
+@mixin text($fs, $fw,$ff, $lh : 1px, $ls : 0px) {
+    font-size: $fs;
+    font-weight: $fw;
+    font-family: $ff, sans-serif;
+    line-height: $lh;
+    letter-spacing: $ls;
+}

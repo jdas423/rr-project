@@ -1,0 +1,8 @@
+@import "../../mixins";
+
+
+.content-wrap{
+    @include flex(center, center);
+    flex-direction: column;
+    @include wh(90%, fit-content);
+}

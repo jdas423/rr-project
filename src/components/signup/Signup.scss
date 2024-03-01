@@ -1,0 +1,38 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.sign-up-wrap{
+   @include wh(80%, 171px);
+   @include flex(space-between, center);
+   .sign-heading{
+       @include wh(370px,88px);
+      @include text(30px, 400, "Inter", 44px, 0em);
+      color:#5C6874;
+   }
+   .sign-up-box{
+   @include flex(center, center);
+      div:first-child{
+       @include wh(275px, 52px);
+       border: 1px solid black;
+       input{
+        @include wh(90%,100%);
+        padding-left: 10px;
+        border: none;
+        outline:none;
+       }
+      }
+      div:last-child{
+         button{
+            @include wh(94px,52px);
+            background: #1B88F4;
+            text-align: center;
+            @include text(14px, 400, "Inter", 20px, 0em);
+            color:white;
+            border:none;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+         }
+      }
+   }
+
+}
