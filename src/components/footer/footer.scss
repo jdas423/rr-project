@@ -1,0 +1,51 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.footer{
+    @include wh(100%, 350px);
+    background:#212731;
+    @include flex(space-around,flex-start);
+    color:white;
+    @include text(13px,400,"Inter",24px,0em);
+    text-align: left;
+
+    li{
+        list-style-type:none;
+    }
+    .footer-list1{
+        margin-top: 76px;
+        margin-left: 59px;
+        li{
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+         li:first-child{
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+         }
+    }
+    .footer-list2{
+        @extend .footer-list1;
+        margin-left:0;
+        li{
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+        li:first-child{
+           font-size: 16px;
+           text-transform: uppercase;
+           margin-bottom: 15px;
+        }
+   }
+
+   .country{
+    margin-top: 134px;
+    margin-right: 160px;
+    @include flex(center,center);
+    div:last-child{
+        margin-top:10px;
+        margin-left:5px;
+    }
+   }
+}

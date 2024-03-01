@@ -18,9 +18,11 @@ export default function Footer(){
     return(
    <div className="footer">
       <ul className="footer-list1">
+        <li>Categories</li>
          {categoriesJSX}
       </ul>
       <ul className="footer-list2">
+        <li>Contact</li>
         {contactJSX}
       </ul>
       <div className="country">
