@@ -37,7 +37,7 @@ export const contents=[
        "Show more":"more",
        "rating":"9.8",
        "reviews":"Excellent",
-       "review src":"../../../icons/star1.png"
+       "review src":"star1.png"
     },
     {
         "img src":"#",
@@ -50,7 +50,7 @@ export const contents=[
         "Show more":"more",
         "rating":"9.8",
        "reviews":"Excellent",
-       "review src":"../../../icons/star2.png"
+       "review src":"star2.png"
     },
     {
         "img src":"#",
@@ -63,7 +63,7 @@ export const contents=[
        "Show more":"",
        "rating":"9.8",
        "reviews":"Excellent",
-       "review src":"../../../icons/star3.png"
+       "review src":"star3.png"
 
     },
     {
@@ -83,7 +83,7 @@ export const contents=[
        "Show more":"",
        "rating":"9.8",
        "reviews":"Excellent",
-       "review src":"../../../icons/star4.png"
+       "review src":"star4.png"
 
     }
 ]
