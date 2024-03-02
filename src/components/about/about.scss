@@ -8,7 +8,7 @@
     flex-wrap:wrap;
     .upper-box{
         @include wh(85%,60px);
-        @include text(20px,400,"Inter",60px,0em);
+        @include text(20px,400,"Inter",40px,0em);
         text-align:left;
         margin:20px 0;
     }

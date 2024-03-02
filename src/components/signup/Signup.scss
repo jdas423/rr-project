@@ -58,3 +58,10 @@
       }
    }
 }
+
+@media screen and (max-width:400px) {
+    .sign-up-wrap{
+      display: none !important;
+    }
+}
+

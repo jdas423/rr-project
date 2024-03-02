@@ -213,9 +213,6 @@
     .content {
         margin: 15px 0 !important;
 
-        // span{
-        //     font-size: 14px !important;
-        // }
         .content-left {
             width: 30% !important;
 
@@ -251,6 +248,18 @@
 
         .content-middle{
             width: 90% !important;
+            p,.highlights,.whatyouget{
+                text-align: center !important;
+            }
         }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .content .content-right{
+        flex-direction: column !important;
+        margin-top:10px !important;
+        margin-bottom: 20px !important;
     }
 }
