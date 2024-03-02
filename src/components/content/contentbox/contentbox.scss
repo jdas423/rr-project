@@ -1,184 +1,206 @@
 @import "../../../mixins";
 @import "../../../variables";
 
-%text-contents{
-    @include text(13px,400,"Inter",20px,0em);
+%text-contents {
+    @include text(13px, 400, "Inter", 20px, 0em);
     text-transform: capitalize;
-    color:#4B5665;
+    color: #4B5665;
 }
 
-.content{
-  @include flex(center,center);
-  @include wh(100%,fit-content);
-  margin: 30px 0;
-  .content-left{
-    @include wh(20%,123px);
-    min-width:141px;
-    @include flex(center,center);
-    flex-direction: column;
-    img{
-        @include wh(141px,103px);
-    }
-    .img-text{
-        @extend %text-contents;
-    }
-  }
+.content {
+    @include flex(flex-start, center);
+    @include wh(100%, fit-content);
+    margin: 30px 0;
+    flex-wrap: wrap;
 
-  .content-middle{
-        @include wh(60%,fit-content);
-       p{
-        margin-bottom: 20px;
-         span:first-child{
-            @include text(16px,700,"Inter",24px,0em);
-            text-align: left;
-         }
-
-         span:not(:first-child){
-            @include text(16px,400,"Inter",24px,0em);
-            text-align: left;
-            color:#4B5665;
-         }
-       }
-
-       .discount{
-          @include wh(53px,20px);
-           background: $text-color1;
-           @extend %text-contents;
-           color: #074786;
-           padding:5px 10px;
-           border-radius: 10px;
-           margin-bottom:15px;
-
-       }
-
-       .highlights{
-        @include text(16px,700,"Inter",24px,0em);
-        text-align: left;
-        @include wh(153px,24px);
-         
-    }
-    .whatyouget{
-        @include text(16px,400,"Inter",24px,0em);
-        color:#4B5665;
-        margin: 0 10px;
-    }
-
-    .highlight-ratings{
-        @include wh(505px,160px);
-        background: #FFF4ED;
-        @include flex(center,center);
+    .content-left {
+        @include wh(20%, 123px);
+        min-width: 141px;
+        @include flex(center, center);
         flex-direction: column;
-        border-radius: 12px;
-        li{
-            list-style-type: none;
-            @include wh(100%,fit-content);
-            @include flex(flex-start,center);
-            .rat{
-                @include flex(center,center);
-                div:first-child{
-                   @include wh(24px,24px);
-                   color: #1B88F4;
-                   background: white;
-                   border-radius: 4px;
-                   padding:5px;
-                   @include text(16px,400,"Inter",24px,0em);
-                   margin: 0 10px 5px 10px;
-                }
-                div:last-child{
-                    @include text(15px,400,"Inter",24px,0em);
-                    text-transform:capitalize;
-                }
+
+        img {
+            @include wh(141px, 103px);
+        }
+
+        .img-text {
+            @extend %text-contents;
+        }
+    }
+
+    .content-middle {
+        @include wh(60%, fit-content);
+
+        p {
+            margin-bottom: 20px;
+
+            span:first-child {
+                @include text(16px, 700, "Inter", 24px, 0em);
+                text-align: left;
+            }
+
+            span:not(:first-child) {
+                @include text(16px, 400, "Inter", 24px, 0em);
+                text-align: left;
+                color: #4B5665;
             }
         }
 
+        .discount {
+            @include wh(53px, 20px);
+            background: $text-color1;
+            @extend %text-contents;
+            color: #074786;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin-bottom: 15px;
 
-    }
-    
-    .loveittext{
-        @include text(16px,400,"Inter",24px,0em);
-        margin-top: 10px;
-
-    }
-    
-    .loveitbox{
-        .loveitli{
-            list-style-type: none;
-            &>div{
-                @include flex(flex-start,center);
-                div:first-child{
-                     img{
-                        @include wh(15px,15px);
-                         background: #EBF5FF;
-                         border-radius: 40px;
-                         padding:5px;
-                     }
-                     margin-right:10px;
-                }
-                div:last-child{
-                  @include text(15px,400,"Inter",24px,0em);
-                  text-transform: capitalize;
-                }
-            }
         }
-    }
-     .show{
-        margin-top: 20px;
-        @include flex(center,center);
-        @include wh(fit-content, fit-content);
-        cursor: pointer;
-        .show-text{
-            @include text(16px,400,"Inter",24px,0em);
+
+        .highlights {
+            @include text(16px, 700, "Inter", 24px, 0em);
             text-align: left;
-            color: #1B88F4;
+            @include wh(153px, 24px);
+
         }
-        .expand {
-            margin: 5px 0 0 5px;
-            img{
-                @include wh(16px,16px);
+
+        .whatyouget {
+            @include text(16px, 400, "Inter", 24px, 0em);
+            color: #4B5665;
+            margin: 0 10px;
+        }
+
+        .highlight-ratings {
+            @include wh(100%, 160px);
+            background: #FFF4ED;
+            @include flex(center, center);
+            flex-direction: column;
+            border-radius: 12px;
+
+            li {
+                list-style-type: none;
+                @include wh(100%, fit-content);
+                @include flex(flex-start, center);
+
+                .rat {
+                    @include flex(center, center);
+
+                    div:first-child {
+                        @include wh(24px, 24px);
+                        color: #1B88F4;
+                        background: white;
+                        border-radius: 4px;
+                        padding: 5px;
+                        @include text(16px, 400, "Inter", 24px, 0em);
+                        margin: 0 10px 5px 10px;
+                    }
+
+                    div:last-child {
+                        @include text(15px, 400, "Inter", 24px, 0em);
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+
+        }
+
+        .loveittext {
+            @include text(16px, 400, "Inter", 24px, 0em);
+            margin-top: 10px;
+
+        }
+
+        .loveitbox {
+            .loveitli {
+                list-style-type: none;
+
+                &>div {
+                    @include flex(flex-start, center);
+
+                    div:first-child {
+                        img {
+                            @include wh(15px, 15px);
+                            background: #EBF5FF;
+                            border-radius: 40px;
+                            padding: 5px;
+                        }
+
+                        margin-right:10px;
+                    }
+
+                    div:last-child {
+                        @include text(15px, 400, "Inter", 24px, 0em);
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+
+        .show {
+            margin-top: 20px;
+            @include flex(center, center);
+            @include wh(fit-content, fit-content);
+            cursor: pointer;
+
+            .show-text {
+                @include text(16px, 400, "Inter", 24px, 0em);
+                text-align: left;
                 color: #1B88F4;
             }
+
+            .expand {
+                margin: 5px 0 0 5px;
+
+                img {
+                    @include wh(16px, 16px);
+                    color: #1B88F4;
+                }
+            }
         }
     }
-  }
 }
 
 
-.content-right{
-    @include wh(20%,250px);
-    @include flex(space-between,center);
-    flex-direction:column;
-    .rating-right{
-        @include wh(135px,118px);
-        @include flex(center,center);
+.content-right {
+    @include wh(20%, 250px);
+    @include flex(space-between, center);
+    flex-direction: column;
+
+    .rating-right {
+        @include wh(135px, 118px);
+        @include flex(center, center);
         flex-direction: column;
         background: #F3F9FF;
-        border-bottom-right-radius:12px;
+        border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
-        color:#074786;
+        color: #074786;
 
-        .rating{
-            @include text(32px,700,"Inter",48px,0em);
+        .rating {
+            @include text(32px, 700, "Inter", 48px, 0em);
 
         }
-        .reviews{
-            @include text(14px,400,"Inter",20px,0em);
+
+        .reviews {
+            @include text(14px, 400, "Inter", 20px, 0em);
         }
-        .star img{
-            @include wh(66px,11px);
+
+        .star img {
+            @include wh(66px, 11px);
         }
 
 
     }
 
-    .right-btn{
-        button{
-            @include wh(166px,45px);
+    .right-btn {
+        button {
+            @include wh(166px, 45px);
             border-radius: 12px;
             background: #1B88F4;
-            color:white;
-            @include text(16px,400,"Inter",24px,0em);
-            outline:none;
-            border:none;
+            color: white;
+            @include text(16px, 400, "Inter", 24px, 0em);
+            outline: none;
+            border: none;
 
         }
 
@@ -186,5 +208,49 @@
 }
 
 
+@media screen and (max-width: 1024px) {
+
+    .content {
+        margin: 15px 0 !important;
+
+        // span{
+        //     font-size: 14px !important;
+        // }
+        .content-left {
+            width: 30% !important;
+
+        }
+
+        .content-middle {
+            font-size: 14px !important;
+            width: 70% !important;
+        }
+
+        .content-right {
+            width: 340px !important;
+            height: 164px !important;
+            flex-direction: row !important;
+            margin-left: 7% !important;
+        }
+    }
+}
 
 
+@media screen and (max-width: 600px) {
+    .content {
+        justify-content: center !important;
+        .content-left{
+            width: 90% !important;
+            margin-bottom: 20px !important;
+            height: fit-content !important;
+            img{
+                width: 257px !important;
+                height: 194px !important;
+            }
+        }
+
+        .content-middle{
+            width: 90% !important;
+        }
+    }
+}

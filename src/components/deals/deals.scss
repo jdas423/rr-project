@@ -18,9 +18,10 @@
         @include wh(100%, fit-content);
         @include flex(center, center);
         margin-left: 40px;
+        flex-wrap: wrap;
 
         .deal-box {
-            @include wh(calc(100% / 3.5), fit-content);
+            @include wh(235px, fit-content);
             border-radius: 12px;
             margin-right: 10px;
             padding:10px;
@@ -112,4 +113,13 @@
         }
     }
 
+}
+
+
+@media screen and (max-width:1024px) {
+    .deals{
+        .deal-topic{
+            font-size: 20px !important;
+        }
+    }
 }

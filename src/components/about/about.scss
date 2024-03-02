@@ -5,6 +5,7 @@
     @include wh(100%,fit-content);
     @include flex(flex-start,center);
     flex-direction: column;
+    flex-wrap:wrap;
     .upper-box{
         @include wh(85%,60px);
         @include text(20px,400,"Inter",60px,0em);
@@ -17,9 +18,16 @@
         border-top : 2px solid #E1E4E6;
         border-bottom: 2px solid #E1E4E6;
         padding:20px 0;
+        flex-wrap: wrap;
 
         .left{
             @include flex(space-between,center);
+            flex-wrap: wrap;
+
+            .date-wrapper{
+                @include flex(space-between,center);
+            } 
+           
             .hypen{
                 width:15px;
                 height:15px;
@@ -31,7 +39,6 @@
                 margin-left: -8px;
             }
             .add{
-                margin-left:15px;
                 a{
                     text-decoration: none;
                     color:black;
@@ -66,5 +73,27 @@
            
         }
     }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .about{
+        .upper-box{
+            font-size: 16px !important;
+            height: fit-content !important;
+        }
+
+        .lower-box{
+            height: fit-content !important;
+
+            .right{
+                margin-left: 22px !important;
+                margin-top: 4px !important;
+            }
+        }
+
+        
+    }
+
 }
 

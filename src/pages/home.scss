@@ -31,3 +31,12 @@ body,#root{
         @include wh(1024px, fit-content);
     }
 }
+
+
+@media screen and (max-width: 1024px) {
+    .main{
+        &>.wrapper{
+            width:100% !important;
+        }
+    }
+}

@@ -13,7 +13,8 @@
    @include flex(center, center);
       div:first-child{
        @include wh(275px, 52px);
-       border: 1px solid black;
+       border: 1px solid #1B88F4;
+       border-right:0;
        input{
         @include wh(90%,100%);
         padding-left: 10px;
@@ -22,6 +23,10 @@
        }
       }
       div:last-child{
+         border: 1px solid #1B88F4;
+         border-left:0;
+         border-top-right-radius: 14px;
+            border-bottom-right-radius: 14px;
          button{
             @include wh(94px,52px);
             background: #1B88F4;
@@ -35,4 +40,21 @@
       }
    }
 
+}
+
+
+
+@media screen and (max-width:1024px) {
+   .sign-up-wrap{
+      flex-direction: column !important;
+      justify-content: center !important;
+      .sign-heading{
+         font-size: 20px !important;
+         line-height:128px !important;
+      }
+
+      .sign-up-box{
+         margin-bottom: 20px !important;
+      }
+   }
 }

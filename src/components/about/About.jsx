@@ -18,33 +18,34 @@ export default function About() {
   );
 }
 
-
-function Left({about}){
-  return(
+function Left({ about }) {
+  return (
     <div className="left">
-    <div className="updated">
-      <img src={Updated} alt="updated" />
-      <div>Last Updated</div>
-    </div>
-    <div className="hypen">-</div>
-    <div className="update-date">{about["update date"]}</div>
-    <div className="add">
-      <img src={Add} alt="add" />
-      <div>
-        <a href={about["Disclosure date link"]}>Advertising Disclosure</a>
+      <div className="date-wrapper">
+        <div className="updated">
+          <img src={Updated} alt="updated" />
+          <div>Last Updated</div>
+        </div>
+        <div className="hypen">-</div>
+        <div className="update-date">{about["update date"]}</div>
+      </div>
+      <div className="add">
+        <img src={Add} alt="add" />
+        <div>
+          <a href={about["Disclosure date link"]}>Advertising Disclosure</a>
+        </div>
       </div>
     </div>
-  </div>
-  )
+  );
 }
 
-function Right({about}){
-  return(
+function Right({ about }) {
+  return (
     <div className="right">
-    <div className="expand">
-      <div>Top Relevant</div>
-      <img src={Expand} alt="expand" />
+      <div className="expand">
+        <div>Top Relevant</div>
+        <img src={Expand} alt="expand" />
+      </div>
     </div>
-  </div>
-  )
+  );
 }

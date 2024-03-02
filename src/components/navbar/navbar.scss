@@ -55,5 +55,53 @@
             color:$text-color1;
         }
     }
+
+    .hamburger{
+        display:none;
+        padding:5px;
+        background-color: white;
+    border-radius: 10px;
+    margin-right: 113px;
+    line-height: 10px;
+        img{
+            @include wh(24px,24px);
+        }
+    }
 }
 
+
+@media screen and (max-width: 1024px) {
+    .nav-wrapper{
+        .nav-ins-wrap{
+            width: 100% !important;
+            justify-content: flex-end !important;
+        }
+        .searchbar{
+            margin-right:20px !important;
+        }
+        .search-icon{
+            padding-left: 6px !important;
+        }
+        .input{
+            display: none !important;
+        }
+
+        .hamburger{
+            display: block !important;
+        }
+
+        .links-wrapper{
+            display: none  !important;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav-ins-wrap{
+        .hamburger{
+            margin-right: 40px !important;
+        }
+    }
+}

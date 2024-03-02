@@ -2,6 +2,7 @@
 import Search from "../../icons/search.png"
 import {links} from "../../inputs.js"
 import './navbar.scss'
+import Hamburger from "../../icons/hamburger.svg"
 
 export default function Navbar(){
     return(
@@ -40,8 +41,14 @@ function NavLinks({links}){
     }
    
     return(
+        <>
        <ul className="links-wrapper">
           {linksJsx}
        </ul>
+       <div className="hamburger">
+         <img src={Hamburger} alt="hamburger" />
+       </div>
+        </>
+
     )
 }
